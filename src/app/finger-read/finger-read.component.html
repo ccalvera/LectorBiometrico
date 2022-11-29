@@ -1,0 +1,24 @@
+<div style="text-align: center">
+  <p>Probando lector de huellas</p>
+
+  <button (click)="listaDispositivos()">Lista de dispositivos</button>
+  <br />
+  <button (click)="infoDispositivo()">Informacion del dispositivo</button>
+</div>
+
+<div style="text-align: center">
+  <button (click)="capturaHuella()">Capturar Huella</button>
+  <br />
+  <button (click)="finalizarCaptura()">Finalizar Capturar Huella</button>
+  <br />
+  <div style="align-items: center">
+    <button (click)="mostrarHuella()">Mostrar Huella</button>
+    <p>Huella</p>
+    <img
+      *ngIf="huella"
+      style="width: 600px; height: 600px"
+      id="base64image"
+      src="data:image/jpeg;base64,{{ currentImageFingerFixed }}"
+    />
+  </div>
+</div>
